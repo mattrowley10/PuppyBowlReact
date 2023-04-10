@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+.nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color:burlywood;
+  justify-content: space-between;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0 5rem 0 5rem;
+  flex-wrap: wrap;
+}
+.card {
+  flex-grow: 1;
+  margin: 8px;
+  padding: 1rem; 
+  border: 1px solid;
+  box-shadow: 1px 1px 2px 2px ;
+}
+.footer {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color:burlywood;
+  height: 5vh;
+}
