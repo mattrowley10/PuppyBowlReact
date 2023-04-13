@@ -1,16 +1,21 @@
-import './App.css'
-import Footer from './Footer'
-import Navbar from './Navbar'
-import Home from './Home'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import SinglePupper from "./Components/SinglePupper";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<SinglePupper />} />
+      </Routes>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,4 +1,4 @@
-html {
+.app, html {
   height: 100%;
 }
 .nav {
@@ -10,21 +10,6 @@ html {
   justify-content: space-between;
 }
 
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  margin: 0 5rem 0 5rem;
-  flex-wrap: wrap;
-}
-.card {
-  flex-grow: 1;
-  margin: 8px;
-  padding: 1rem; 
-  border: 1px solid;
-  box-shadow: 1px 1px 2px 2px ;
-}
 .footer {
   display: flex;
   position: sticky;
@@ -34,3 +19,26 @@ html {
   background-color:burlywood;
   height: 5vh;
 }
+.allCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5rem 0rem 4rem 5rem;
+  width: 90vw;
+}
+.oneCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 25rem 5rem 25rem;
+  margin: 5rem 15rem 17rem 15rem;
+}
+  .card {
+    flex-grow: 1;
+    text-align: center;
+    margin: 10px;
+    padding: 2rem; 
+    border: 1px solid;
+    box-shadow: 1px 1px 2px 2px ;
+  }
