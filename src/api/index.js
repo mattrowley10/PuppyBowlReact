@@ -25,14 +25,18 @@ export const fetchSinglePlayer = async (playerId) => {
         console.error(`Oh no! Trouble fetching player`, error)
     }
 };
-export const addNewPlayer = async (playerObj) => {
+export const addNewPlayer = async (name, email, breed) => {
     try{
     const response = await fetch(`${APIURL}players`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(playerObj)
+        body: JSON.stringify({
+            name, 
+            email,
+            breed,
+        })
     });
     const onePup = await response.json();
     return onePup

@@ -1,12 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { fetchAllPlayers } from "../api";
+import { fetchAllPlayers, removePlayer } from "../api";
 import { useNavigate } from "react-router-dom";
 
 export default function AllPuppers() {
+  const image = "https://placedog.net/500?";
   const nav = useNavigate();
   const [pups, setPups] = useState([]);
-
   useEffect(() => {
     async function getAllPups() {
       try {
@@ -17,7 +17,7 @@ export default function AllPuppers() {
       }
     }
     getAllPups();
-  }, []);
+  }, [pups]);
 
   return (
     <div className="allCards">
@@ -26,13 +26,9 @@ export default function AllPuppers() {
           <div className="card" key={pup.id}>
             <h2>{pup.name}</h2>
             <p>{pup.breed}</p>
-            <p>{pup.email}</p>
-            <p>{pup.id}</p>
-            <img
-              height="200px"
-              width="200px"
-              src="https://placedog.net/500?random"
-            />
+            <p>{pup.status}</p>
+            <img src={pup.imageUrl} height="300rem" width="200rem" />
+            <br></br>
             <br></br>
             <button
               onClick={() => {
@@ -40,6 +36,15 @@ export default function AllPuppers() {
               }}
             >
               Details
+            </button>
+            <br></br>
+            <br></br>
+            <button
+              onClick={async (e) => {
+                await removePlayer(pup.id);
+              }}
+            >
+              Delete
             </button>
           </div>
         );
