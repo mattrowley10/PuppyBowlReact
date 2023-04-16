@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchSinglePlayer } from "../api";
+import { fetchSinglePlayer, removePlayer } from "../api";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -24,23 +24,31 @@ export default function SinglePupper() {
   return (
     <div className="oneCard">
       {pup && (
-        <div className="card" key={pup.id}>
+        <div className="single-card" key={pup.id}>
           <h2>{pup.name}</h2>
           <p>{pup.breed}</p>
-          <p>{pup.email}</p>
-          <p>{pup.id}</p>
-          <img
-            height="200px"
-            width="200px"
-            src="https://placedog.net/500?random"
-          />
+          <br></br>
+          <img height="300px" width="250px" src={pup.imageUrl} />
+          <br></br>
           <br></br>
           <button
+            className="button"
             onClick={() => {
               nav("/");
             }}
           >
             Home
+          </button>
+          <br></br>
+          <br></br>
+          <button
+            className="button"
+            onClick={async (e) => {
+              await removePlayer(pup.id);
+              nav("/");
+            }}
+          >
+            Delete
           </button>
         </div>
       )}

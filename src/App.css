@@ -5,17 +5,25 @@
 }
 .nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   padding: 1rem;
   background-color:burlywood;
-  justify-content:space-between;
-  align-items:center;
-}
-.header {
-  margin-right: 50rem;
 }
 
+.nav-items {
+  list-style: none;
+  display: flex;
+}
+.item {
+  padding: 12px;
+}
+.button {
+  padding: 5px;
+  font-weight: bold;
+}
 
 .footer {
   padding: 12px;
@@ -25,37 +33,47 @@
   justify-content: center;
   align-items: center;
   background-color:burlywood;
-  height: 5vh;
 }
 .allCards {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 5rem 0rem 4rem 5rem;
-  width: 90vw;
   min-height: 100vh;
+  padding: 1rem;
 }
 .oneCard {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 25rem 5rem 25rem;
-  margin: 5rem 15rem 17rem 15rem;
+  min-height: 86.75vh;
 } 
-/* //need media query for this oneCard  */
-  .card {
-    flex-grow: 1;
-    text-align: center;
-    margin: 10px;
-    padding: 2rem; 
-    border: 1px solid;
-    box-shadow: 1px 1px 2px 2px ;
-  }
+
+.card {
+  flex-grow: 1;
+  text-align: center;
+  margin: 10px;
+  padding: 2rem; 
+  border: 1px solid;
+  box-shadow: 1px 1px 2px 2px ;
+}
+.single-card {
+  text-align: center;
+  margin: 10px;
+  padding: 2rem; 
+  border: 1px solid;
+  box-shadow: 1px 1px 2px 2px ;
+}
 
   .addPupper {
     text-align: center;
-    min-height: 85vh;
-    margin: 1rem;
+    min-height: 80.5vh;
+    margin: 2rem;
     padding: 1rem;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }

@@ -31,6 +31,7 @@ export default function AllPuppers() {
             <br></br>
             <br></br>
             <button
+              className="button"
               onClick={() => {
                 nav(`/${pup.id}`);
               }}
@@ -40,6 +41,7 @@ export default function AllPuppers() {
             <br></br>
             <br></br>
             <button
+              className="button"
               onClick={async (e) => {
                 await removePlayer(pup.id);
               }}

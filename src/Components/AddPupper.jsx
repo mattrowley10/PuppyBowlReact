@@ -20,11 +20,15 @@ export default function AddPupper() {
         }}
         className="form"
       >
+        <br></br>
+        <br></br>
         <label htmlFor="name">Name: </label>
         <input type="text" onChange={(event) => setName(event.target.value)} />
         <br></br>
+        <br></br>
         <label htmlFor="breed">Breed: </label>
         <input type="text" onChange={(event) => setBreed(event.target.value)} />
+        <br></br>
         <br></br>
         <button>Submit!</button>
       </form>
