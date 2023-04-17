@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const nav = useNavigate();
+  const [pup, setPup] = useState("");
   return (
     <div className="nav">
       <h1 className="header">The Puppy Bowl</h1>
@@ -27,12 +28,18 @@ export default function Navbar() {
             Add New Pup!
           </button>
         </li>
-        <li className="item">
-          <label>
-            Search:
-            <input type="text" placeholder="Search" />
-          </label>
-        </li>
+        {/* <li className="item">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              nav("/searched_pup");
+            }}
+          >
+            <label>Search:</label>
+            <input type="text" placeholder="Puppy Name Here" />
+            <button>Submit</button>
+          </form>
+        </li> */}
       </ul>
     </div>
   );

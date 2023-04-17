@@ -5,6 +5,7 @@ import SinglePupper from "./Components/SinglePupper";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import AddPupper from "./Components/AddPupper";
+import SearchedPupper from "./Components/SearchedPupper";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<SinglePupper />} />
         <Route path="/player_form" element={<AddPupper />} />
+        <Route path="/:name" element={<SearchedPupper />} />
       </Routes>
       <Footer />
     </div>
